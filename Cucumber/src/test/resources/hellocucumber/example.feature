@@ -1,31 +1,27 @@
-Feature: A set of scenarios for testing the "example" module
+Feature:  user add a product to cart twice, admin changes quantity to one
 
-#  Scenario: Testing how a case where a user adds a product to the cart
-#    Given The user on the pres page
-#    And The user enters Email as "idolou1@gmail.com" and Password as "12345678"
-#    And the user click sign in
-#    And the user click myshop
+  Scenario: Successful user adds white shirt size S quantity =2 to the cart
+    Given The user on the pres page
+    And The user enters Email as "idolou1@gmail.com" and Password as "12345678"
+    And the user click sign in
+    And the user click myStore
+    And the user click on the white shirt
+    And the user click increase quantity by one
+    And the user click add to cart
+    Then a message showing product successfully added to cart appeared
 
-  Scenario: Successful admin login
-    Given The admin on the pres page
+
+  Scenario: Successful admin change quantity for white S size shirt to 1
+    Given The admin on the presta page
     When The admin enters Email as "eladshmu@post.bgu.ac.il" and Password as "12345678"
-    And  click log in
-    ######
+    And admin click log in
     And admin navigate to catalog
-    And  click log in
+    And admin click on products
+    And admin click on white colored shirt quantity field
+    And admin clean quantity field of shirt size-S
     And admin changes quantity as "1"
-
-
-
-#    Then admin on home page
-#    And the user click sign in
-#    And the user click myshop
-
-#  Scenario: Admin change white shirt quentity to 1
-#    Given admin on home page
-#    And admin navigate to catalog
-#    And  click log in
-#    And admin changes quantity as "1"
+    And admin save the new state
+    Then Settings update message appear
 
 
 

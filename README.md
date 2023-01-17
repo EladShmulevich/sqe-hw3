@@ -2,31 +2,34 @@
 This is a repository for assignment 3 of the Software Quality Engineering course at the [Ben-Gurion University](https://in.bgu.ac.il/), Israel.
 
 ## Assignment Description
-In this assignment, we tested an open-source software called [$$*TODO* software name$$](https://address-of-the-project.com).
+In this assignment, we tested an open-source software called prestashop(https://github.com/PrestaShop/PrestaShop).
 
-$$*TODO* Add some general description about the software$$
+PrestaShop is a freemium, open source e-commerce platform. The software is published under the Open Software
+License (OSL). It is written in the PHP programming language with support for the MySQL database management system.
+It has a software dependency on the Symfony PHP framework.
 
 ## Installation
-$$*TODO* Write instructions on how to install the software and prepare the testing environment$$
+You can install the software using xampp which is a free and open-source cross-platform web
+server solution stack package developed by Apache Friends. you than have to download the
+installation and go by the instructions.
 
 ## What we tested
-$$*TODO* Add a description of the module and the user stories that you chose to test.
-For example, in the case of the Moodle example, you can write something like this:
+We tested the case when a User log in into the store and add to his cart 2 pieces from one product(white shirt size small).
+Then the admins logs in and change the quantity of this product to be 1.
 
-We tested the quiz module that allows for creating and taking quizzes. We chose to test the following user stories: 
 
-*User story:* A teacher adds a new quiz to the course with two yes/no questions
+*User story:* user add a product to cart twice
 
-*Preconditions:* There is a course with a teacher
+*Preconditions:* user loged in
 
-*Expected outcome:* The quiz is added to the course.
+*Expected outcome:* the products were added to the users cart
 
-*User story:* A students attempts a quiz and answers correctly.
+*User story:* Successful admin change quantity for white S size shirt to 1.
 
-*Preconditions:* There is a course with a quiz with two yes/no questions and the quiz grade is calculated automatically and the grade is visible to the students upon submission.
+*Preconditions:* Admin loges in
 
-*Expected outcome:* The student receives 100.
-$$
+*Expected outcome:* The quantity of the product changed to 1
+
 
 ## How we tested
 We used two different testing methods:
@@ -36,17 +39,16 @@ We used two different testing methods:
 Each of the testing methods is elaborated in its own directory. 
 
 ## Results
-Update all README.md files (except for d-e, see Section 1). Specifically, replace all $$*TODO*…$$ according to the instructions inside the $$.
+Update all README.md files
 
 ## Detected Bugs
-We detected the following bugs:
+We detected the following bug:
 
 1. Bug 1: 
-   1. General description: ...
+   1. General description: User have 2 pieces of the product on his cart while the quantity of the product is actually 1.
    2. Steps to reproduce: ...
-   3. Expected result: ...
-   4. Actual result: ...
-   5. Link to the bug report: (you are encouraged to report the bug to the developers of the software)
-2. Bug 2: ...
+   3. Expected result: Error message for the user, "we apologize but there was an error"
+   4. Actual result: no error shown
 
-$$*TODO* if you did not detect the bug, you can delete this section$$  
+
+
